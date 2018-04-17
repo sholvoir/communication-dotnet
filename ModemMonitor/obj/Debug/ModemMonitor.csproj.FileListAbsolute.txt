@@ -1,0 +1,14 @@
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\ModemMonitor.csprojResolveAssemblyReference.cache
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\Vultrue.Communication.DlgModemMonitor.resources
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\Vultrue.Communication.Properties.Resources.resources
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\Vultrue.Communication.DataShow.resources
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\Vultrue.Communication.UCModemMonitor.resources
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\ModemMonitor.csproj.GenerateResource.Cache
+Z:\Home\Projects\Communication\ModemMonitor\bin\Debug\ModemMonitor.dll
+Z:\Home\Projects\Communication\ModemMonitor\bin\Debug\ModemMonitor.pdb
+Z:\Home\Projects\Communication\ModemMonitor\bin\Debug\Modem.dll
+Z:\Home\Projects\Communication\ModemMonitor\bin\Debug\Arithmetic.dll
+Z:\Home\Projects\Communication\ModemMonitor\bin\Debug\Modem.pdb
+Z:\Home\Projects\Communication\ModemMonitor\bin\Debug\Arithmetic.pdb
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\ModemMonitor.dll
+Z:\Home\Projects\Communication\ModemMonitor\obj\Debug\ModemMonitor.pdb

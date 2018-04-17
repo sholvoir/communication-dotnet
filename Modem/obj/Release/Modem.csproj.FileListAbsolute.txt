@@ -1,0 +1,9 @@
+Z:\Home\Projects\Communication\Modem\obj\Release\Vultrue.Communication.Modem.resources
+Z:\Home\Projects\Communication\Modem\obj\Release\Modem.csproj.GenerateResource.Cache
+Z:\Home\Projects\Communication\Modem\bin\Release\Modem.dll
+Z:\Home\Projects\Communication\Modem\bin\Release\Modem.pdb
+Z:\Home\Projects\Communication\Modem\bin\Release\Arithmetic.dll
+Z:\Home\Projects\Communication\Modem\bin\Release\Arithmetic.pdb
+Z:\Home\Projects\Communication\Modem\obj\Release\Modem.csprojResolveAssemblyReference.cache
+Z:\Home\Projects\Communication\Modem\obj\Release\Modem.dll
+Z:\Home\Projects\Communication\Modem\obj\Release\Modem.pdb
