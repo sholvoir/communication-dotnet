@@ -1,0 +1,18 @@
+﻿<SOAP-ENV:Envelope 
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dsmp="http://www.monternet.com/dsmp/schemas/">
+  <SOAP-ENV:Header>
+    <dsmp:TransactionID xmlns:dsmp="http://www.monternet.com/dsmp/schemas/">
+      00110318384464
+    </dsmp:TransactionID>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <dsmp:SyncOrderRelationResp xmlns:dsmp="http://www.monternet.com/dsmp/schemas/">
+      <MsgType>SyncOrderRelationResp</MsgType>
+      <Version>1.5</Version>
+      <hRet>0</hRet>
+    </dsmp:SyncOrderRelationResp>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

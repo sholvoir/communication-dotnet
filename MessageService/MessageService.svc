@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Vultrue.Communication.MessageService" CodeBehind="MessageService.svc.cs" %>

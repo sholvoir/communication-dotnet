@@ -1,0 +1,177 @@
+<definitions xmlns:ws="http://www.monternet.com/dsmp/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.ort/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:dsmp="http://www.monternet.com/dsmp/schemas/" targetNamespace="http://www.monternet.com/dsmp/wsdl/">
+ <types>
+  <schema targetNamespace="http://www.monternet.com/dsmp/schemas/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+   <complexType name="address_info_schema">
+    <sequence>
+     <element name="DeviceType" type="xsd:integer"/>
+     <element name="DeviceID" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="user_id_schema">
+    <sequence>
+     <element name="UserIDType" type="xsd:integer"/>
+     <element name="MSISDN" type="xsd:string"/>
+     <element name="PseudoCode" type="xsd:base64Binary"/>
+    </sequence>
+   </complexType>
+   <complexType name="service_id_schema">
+    <sequence>
+     <element name="ServiceIDType" type="integer"/>
+     <element name="SPID" type="string"/>
+     <element name="SPServiceID" type="string"/>
+     <element name="AccessNo" type="string"/>
+     <element name="FeatureStr" type="base64Binary"/>
+    </sequence>
+   </complexType>
+   <!-- request & response -->
+   <element name="TransactionID" type="xsd:string"/>
+   <element name="SyncOrderRelationReq" type="dsmp:SyncOrderRelationReqType"/>
+   <complexType name="SyncOrderRelationReqType">
+    <sequence>
+     <element name="MsgType" type="xsd:string"/>
+     <element name="Version" type="xsd:string"/>
+     <element name="Send_Address" type="dsmp:address_info_schema"/>
+     <element name="Dest_Address" type="dsmp:address_info_schema"/>
+     <element name="FeeUser_ID" type="dsmp:user_id_schema"/>
+     <element name="DestUser_ID" type="dsmp:user_id_schema"/>
+     <element name="LinkID" type="xsd:string" minOccurs="0"/>
+     <element name="ActionID" type="xsd:integer"/>
+     <element name="ActionReasonID" type="xsd:integer"/>
+     <element name="SPID" type="xsd:string" minOccurs="0"/>
+     <element name="SPServiceID" type="xsd:string"/>
+     <element name="AccessMode" type="xsd:integer" minOccurs="0"/>
+     <element name="FeatureStr" type="xsd:base64Binary" minOccurs="0"/>
+    </sequence>
+   </complexType>
+   <element name="SyncOrderRelationResp" type="dsmp:SyncOrderRelationRespType"/>
+   <complexType name="SyncOrderRelationRespType">
+    <sequence>
+     <element name="MsgType" type="xsd:string"/>
+     <element name="Version" type="xsd:string"/>
+     <element name="hRet" type="xsd:integer"/>
+    </sequence>
+   </complexType>
+   <element name="SubscribeServiceReq" type="dsmp:SubscribeServiceReqType"/>
+   <complexType name="SubscribeServiceReqType">
+    <sequence>
+     <element name="Version" type="string"/>
+     <element name="MsgType" type="string"/>
+     <element name="Send_Address" type="dsmp:address_info_schema"/>
+     <element name="Dest_Address" type="dsmp:address_info_schema"/>
+     <element name="FeeUser_ID" type="dsmp:user_id_schema"/>
+     <element name="DestUser_ID" type="dsmp:user_id_schema"/>
+     <element name="Service_ID" type="dsmp:service_id_schema"/>
+     <element name="FeatureStr" type="base64Binary" minOccurs="0"/>
+    </sequence>
+   </complexType>
+   <element name="SubscribeServiceResp" type="dsmp:SubscribeServiceRespType"/>
+   <complexType name="SubscribeServiceRespType">
+    <sequence>
+     <element name="Version" type="string"/>
+     <element name="MsgType" type="string"/>
+     <element name="hRet" type="integer"/>
+     <element name="LinkID" type="string" minOccurs="0"/>
+    </sequence>
+   </complexType>
+   <element name="UnSubscribeServiceReq" type="dsmp:UnSubscribeServiceReqType"/>
+   <complexType name="UnSubscribeServiceReqType">
+    <sequence>
+     <element name="Version" type="string"/>
+     <element name="MsgType" type="string"/>
+     <element name="Send_Address" type="dsmp:address_info_schema"/>
+     <element name="Dest_Address" type="dsmp:address_info_schema"/>
+     <element name="FeeUser_ID" type="dsmp:user_id_schema"/>
+     <element name="DestUser_ID" type="dsmp:user_id_schema"/>
+     <element name="Service_ID" type="dsmp:service_id_schema"/>
+    </sequence>
+   </complexType>
+   <element name="UnSubscribeServiceResp" type="dsmp:UnSubscribeServiceRespType"/>
+   <complexType name="UnSubscribeServiceRespType">
+    <sequence>
+     <element name="Version" type="string"/>
+     <element name="MsgType" type="string"/>
+     <element name="hRet" type="integer"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </types>
+ <message name="ma.SyncOrderRelationReq">
+  <part name="SyncOrderRelationInput" element="dsmp:SyncOrderRelationReq"/>
+  <part name="TransactionIDInput" element="dsmp:TransactionID"/>
+ </message>
+ <message name="ma.SyncOrderRelationResp">
+  <part name="SyncOrderRelationOutput" element="dsmp:SyncOrderRelationResp"/>
+  <part name="TransactionIDOut" element="dsmp:TransactionID"/>
+ </message>
+ <message name="ma.SubscribeServiceReq">
+  <part name="SubscribeServiceInput" element="dsmp:SubscribeServiceReq"/>
+  <part name="TransactionIDInput" element="dsmp:TransactionID"/>
+ </message>
+ <message name="ma.SubscribeServiceResp">
+  <part name="SubscribeServiceOutput" element="dsmp:SubscribeServiceResp"/>
+  <part name="TransactionIDOut" element="dsmp:TransactionID"/>
+ </message>
+ <message name="ma.UnSubscribeServiceReq">
+  <part name="UnSubscribeServiceInput" element="dsmp:UnSubscribeServiceReq"/>
+  <part name="TransactionIDInput" element="dsmp:TransactionID"/>
+ </message>
+ <message name="ma.UnSubscribeServiceResp">
+  <part name="UnSubscribeServiceOutput" element="dsmp:UnSubscribeServiceResp"/>
+  <part name="TransactionIDOut" element="dsmp:TransactionID"/>
+ </message>
+ <portType name="maPort">
+  <operation name="SyncOrderRelation">
+   <input message="ws:ma.SyncOrderRelationReq"/>
+   <output message="ws:ma.SyncOrderRelationResp"/>
+  </operation>
+  <operation name="SubscribeService">
+   <input message="ws:ma.SubscribeServiceReq"/>
+   <output message="ws:ma.SubscribeServiceResp"/>
+  </operation>
+  <operation name="UnSubscribeService">
+   <input message="ws:ma.UnSubscribeServiceReq"/>
+   <output message="ws:ma.UnSubscribeServiceResp"/>
+  </operation>
+ </portType>
+ <binding name="maPortBinding" type="ws:maPort">
+  <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="SubscribeService">
+   <soap:operation soapAction="sim.SubscribeService" style="document"/>
+   <input>
+    <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+    <soap:header message="ws:ma.SubscribeServiceReq" part="TransactionIDInput" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+   </input>
+   <output>
+    <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+    <soap:header message="ws:ma.SubscribeServiceResp" part="TransactionIDOut" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+   </output>
+  </operation>
+  <operation name="SyncOrderRelation">
+   <soap:operation soapAction="sim.SyncOrderRelation" style="document"/>
+   <input>
+    <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+    <soap:header message="ws:ma.SyncOrderRelationReq" part="TransactionIDInput" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+   </input>
+   <output>
+    <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+    <soap:header message="ws:ma.SyncOrderRelationResp" part="TransactionIDOut" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+   </output>
+  </operation>
+  <operation name="UnSubscribeService">
+   <soap:operation soapAction="sim.UnSubscribeService" style="document"/>
+   <input>
+    <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+    <soap:header message="ws:ma.UnSubscribeServiceReq" part="TransactionIDInput" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+   </input>
+   <output>
+    <soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+    <soap:header message="ws:ma.UnSubscribeServiceResp" part="TransactionIDOut" use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding" namespace="http://10.1.2.122/misc/dsmp.xsd"/>
+   </output>
+  </operation>
+ </binding>
+ <service name="dsmp">
+  <port name="maPort" binding="ws:maPortBinding">
+   <soap:address location="http://localhost:8080/axis/services/maPort"/>
+  </port>
+ </service>
+</definitions>

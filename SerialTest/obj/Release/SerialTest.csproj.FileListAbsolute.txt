@@ -1,1 +1,0 @@
-Z:\Home\Projects\DotNet\Communication\SerialTest\bin\Release\SerialTest.exe.config

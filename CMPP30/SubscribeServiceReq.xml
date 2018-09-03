@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://www.monternet.com/dsmp/schemas/">
+  <SOAP-ENV:Header>
+    <TransactionID xmlns="http://www.monternet.com/dsmp/schemas/" xsi:type="xsd:string">00240301801050</TransactionID>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <SubscribeServiceReq xmlns="http://www.monternet.com/dsmp/schemas/">
+      <Version>1.5.0</Version>
+      <MsgType>SubscribeServiceReq</MsgType>
+      <Send_Address>
+        <DeviceType>400</DeviceType>
+        <DeviceID>913002</DeviceID>
+      </Send_Address>
+      <Dest_Address>
+        <DeviceType>0</DeviceType>
+        <DeviceID>0024</DeviceID>
+      </Dest_Address>
+      <FeeUser_ID>
+        <UserIDType>1</UserIDType>
+        <MSISDN>13805002424</MSISDN>
+        <PseudoCode />
+        中国移动通信集团公司 - 31 -
+        ASPire Tech 卓望科技 MISC 系统短信 SP 接入指南
+      </FeeUser_ID>
+      <DestUser_ID>
+        <UserIDType>1</UserIDType>
+        <MSISDN>13805002424</MSISDN>
+        <PseudoCode />
+      </DestUser_ID>
+      <Service_ID>
+        <ServiceIDType>1</ServiceIDType>
+        <SPID>913002</SPID>
+        <SPServiceID>-TQAAU</SPServiceID>
+        <AccessNo />
+        <FeatureStr />
+      </Service_ID>
+      <FeatureStr />
+    </SubscribeServiceReq>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

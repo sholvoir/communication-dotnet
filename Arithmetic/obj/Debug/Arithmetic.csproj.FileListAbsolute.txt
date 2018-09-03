@@ -1,5 +1,0 @@
-Z:\Home\Projects\Communication\Arithmetic\obj\Debug\Arithmetic.csprojResolveAssemblyReference.cache
-Z:\Home\Projects\Communication\Arithmetic\bin\Debug\Arithmetic.dll
-Z:\Home\Projects\Communication\Arithmetic\bin\Debug\Arithmetic.pdb
-Z:\Home\Projects\Communication\Arithmetic\obj\Debug\Arithmetic.dll
-Z:\Home\Projects\Communication\Arithmetic\obj\Debug\Arithmetic.pdb

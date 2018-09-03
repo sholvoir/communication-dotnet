@@ -1,0 +1,36 @@
+﻿<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xmlns:xsd="http://www.w3.org/2001/XMLSchema"    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <SOAP-ENV:Header>
+    <TransactionID xmlns="http://www.monternet.com/dsmp/schemas/">00110318384464</TransactionID>
+  </SOAP-ENV:Header>
+  <SOAP-ENV:Body>
+    <SyncOrderRelationReq xmlns="http://www.monternet.com/dsmp/schemas/">
+      <Version>1.5.0</Version>
+      <MsgType>SyncOrderRelationReq</MsgType>
+      <Send_Address>
+        <DeviceType>0</DeviceType>
+        <DeviceID>0011</DeviceID>
+      </Send_Address>
+      <Dest_Address>
+        <DeviceType>400</DeviceType>
+        <DeviceID>0</DeviceID>
+      </Dest_Address>
+      <FeeUser_ID>
+        <UserIDType>1</UserIDType>
+        <MSISDN>13456781234</MSISDN>
+        <PseudoCode></PseudoCode>
+      </FeeUser_ID>
+      <DestUser_ID>
+        <UserIDType>1</UserIDType>
+        <MSISDN>13456781234</MSISDN>
+        <PseudoCode></PseudoCode>
+      </DestUser_ID>
+      <LinkID>SP</LinkID>
+      <ActionID>1</ActionID>
+      <ActionReasonID>1</ActionReasonID>
+      <SPID>419000</SPID>
+      <SPServiceID>-YYXXYYXX</SPServiceID>
+      <AccessMode>3</AccessMode>
+      <FeatureStr>MTA2NjIxNDQgREE=</FeatureStr>
+    </SyncOrderRelationReq>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,0 +1,141 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CD96299-5344-406C-A910-026A313983FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vultrue.Communication</RootNamespace>
+    <AssemblyName>ConnectionMonitor</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DlgConnectionMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgConnectionMonitor.Designer.cs">
+      <DependentUpon>DlgConnectionMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DlgConnectionDebugger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgConnectionDebugger.Designer.cs">
+      <DependentUpon>DlgConnectionDebugger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConnectionMonitor.Designer.cs">
+      <DependentUpon>ConnectionMonitor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DlgConnectionMonitor.resx">
+      <DependentUpon>DlgConnectionMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgConnectionDebugger.resx">
+      <DependentUpon>DlgConnectionDebugger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionMonitor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConnectionMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\System.Net.Sockets.Socket.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Generic\Generic\Generic.csproj">
+      <Project>{2A0631CB-0A80-420A-9C3F-84C902CCDD8E}</Project>
+      <Name>Generic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Connection\Connection.csproj">
+      <Project>{B7864697-9636-44BC-BDB4-640D63486229}</Project>
+      <Name>Connection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SerialPortMonitor\SerialPortMonitor.csproj">
+      <Project>{564D5014-6DE7-4DE3-A69A-A4BC0CB8A417}</Project>
+      <Name>SerialPortMonitor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AutoClear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notesend.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bs.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\ConnectionMonitor.datasource" />
+    <None Include="Properties\DataSources\IConnection.datasource" />
+    <None Include="Properties\DataSources\NameValue.datasource" />
+    <None Include="Properties\DataSources\System.Net.Sockets.TcpListener.datasource" />
+    <None Include="Properties\DataSources\TcpServer.datasource" />
+    <None Include="Resources\option.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

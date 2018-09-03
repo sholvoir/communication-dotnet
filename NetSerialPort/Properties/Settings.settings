@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Vultrue.Communication.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SerialSetting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">COM4,19200,8,0,1,2</Value>
+    </Setting>
+    <Setting Name="IPPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1:4375</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
